@@ -51,7 +51,6 @@ function getNextRestartTime(serverIp) {
 }
 
 function updateRestartTimes() {
-  console.log('Updating restart times...');
   document.querySelectorAll('.block-row.gmodStatusCard').forEach(card => {
     const serverIp = card.getAttribute('data-server-address');
     const restartInfo = getNextRestartTime(serverIp);
@@ -83,3 +82,5 @@ function updateRestartTimes() {
 
 updateRestartTimes();
 setInterval(updateRestartTimes, 1000); // Update every second
+
+console.log('GtaCityRP Restart Time extension loaded.');
