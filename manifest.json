@@ -6,7 +6,7 @@
   "description": "A simple extension that shows the remaining time until the next restart of the GTA City Forum.",
   "content_scripts": [
     {
-      "matches": ["*://gtacityrp.fr/*"],
+      "matches": ["*://gtacityrp.fr/index.php"],
       "js": ["script.js"]
     }
   ]
