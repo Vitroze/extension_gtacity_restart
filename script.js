@@ -1,4 +1,4 @@
-RESTART_TIME = {
+const RESTART_TIME = {
   "51.38.168.199:27015": [
     "8h00",
     "17h00"
