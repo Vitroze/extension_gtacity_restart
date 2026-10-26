@@ -58,9 +58,11 @@ function updateRestartTimes() {
     if (restartInfo) {
       let restartDiv = card.querySelector('.gmodStatusRestart');
       if (restartDiv) {
-        restartDiv.innerHTML = `
-          <strong>Prochain redémarrage</strong> : ${restartInfo.restartTime} (dans ${restartInfo.remaining})
-        `;
+        restartDiv.replaceChildren(); // Clear any existing content
+
+        const strong = document.createElement('strong');
+        strong.textContent = 'Prochain redémarrage';
+        restartDiv.append(strong, `: ${restartInfo.restartTime} (dans ${restartInfo.remaining})`);
 
         return;
       }
@@ -71,9 +73,13 @@ function updateRestartTimes() {
       restartDiv.style.overflowWrap = 'break-word';
       restartDiv.style.marginTop = '0px';
       restartDiv.style.whiteSpace = 'normal';
-      restartDiv.innerHTML = `
-        <strong>Prochain redémarrage</strong> : ${restartInfo.restartTime} (dans ${restartInfo.remaining})
-      `;
+
+      restartDiv.replaceChildren(); // Clear any existing content
+
+      const strong = document.createElement('strong');
+      strong.textContent = 'Prochain redémarrage';
+      restartDiv.append(strong, `: ${restartInfo.restartTime} (dans ${restartInfo.remaining})`);
+
       card.querySelector('.gmodStatusMeta').appendChild(restartDiv);
     }
 
