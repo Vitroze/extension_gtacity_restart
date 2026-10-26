@@ -1,4 +1,4 @@
-# Extension GtaCityRP
+# Extension GtaCityRP Restart
 
 `Extension GtaCityRP` is a simple browser extension that displays the remaining time until the next server restart on the GtaCityRP forum. It is designed to work with Chrome, Edge, and Firefox browsers.
 
